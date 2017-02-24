@@ -18,8 +18,9 @@ The purpose of this assignment was to demonstrate our ability to collect, work w
 ## In this folder
 
 - README.md
-- run_analysis.R : script to perform the analysis
-- merging_mean_sd.csv : tidy data with the mean and standard deviation of measurements
-- merged_datasets_labelled.csv : tidy data composed of the two datasets (train and test) merged and labelled
-- ssummarized_dataset_table.csv : tidy data corresponding of one summary for all the measurements per subject and activity
 - code_book.txt : description of variables and 
+- UCI HAR Dataset repository containing :
+* README.txt file of the initial experiment. Contains information about test and train folders
+* run_analysis.R : script to perform the analysis
+* summarized_dataset_table.csv : tidy data corresponding of one summary for all the measurements per subject and activity
+
