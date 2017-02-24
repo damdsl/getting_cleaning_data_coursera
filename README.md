@@ -21,6 +21,16 @@ The purpose of this assignment was to demonstrate our ability to collect, work w
 - code_book.txt : description of variables and 
 - UCI HAR Dataset repository containing :
 * README.txt file of the initial experiment. Contains information about test and train folders
+* features : features in test and train datasets
+* features_info : features code book
+* activity_labels : describes activities
 * run_analysis.R : script to perform the analysis
-* summarized_dataset_table.csv : tidy data corresponding of one summary for all the measurements per subject and activity
+* summarized_dataset_table.txt : tidy data corresponding of one summary for all the measurements per subject and activity
+* index_summarized_data.txt : list column names in summarized_dataset_table.txt
 
+## How to run
+In order to get the summarized dataset 
+1- download this repo
+2- Go at the root of this repo in R with setwd() command
+3- source(run_analysis.R)
+4-  run the script with run_analysis()
