@@ -3,15 +3,11 @@ Getting and cleaning data - Assignment
 Coursera
 24-02-2017
 
-Describe the variable names for each tidy table
+Add the following informations to data labels contained in "./UCI HAR Dataset/README.txt"
 
-merging_mean_sd.csv
-
-1- mean : average of the 561 feature vectors
-1- sd : standard deviation
-
-merged_datasets_labelled.csv
+summarized_dataset_table.csv
 Labels added to the previously created dataset
+Using the previous dataset, group by activity and subject and calculate the mean
 
 1- class : class of the activity
 2- activity : nature of activities. Six are possible :
@@ -27,7 +23,3 @@ Labels added to the previously created dataset
 4- mean : as previous
 5- sd : as previous
 
-summarized_dataset_table.csv
-Using the previous dataset, group by activity and subject and calculate the mean
-
-column names are as previous

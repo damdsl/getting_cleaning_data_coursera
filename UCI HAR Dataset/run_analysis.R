@@ -5,10 +5,27 @@
 #                               20-02-17                                       #
 #------------------------------------------------------------------------------#
 
+# !!! Script modified for the purpose of the assignment !!!
 
 ## Part 1 : accessing and downloading the data
+        # This part is mandatory and has to be performed one single time
 
-files <- list.files(recursive = TRUE)
+#directory <- "your_path"
+
+#if(!file.exists(directory)) {
+#        dir.create(directory)
+#}
+
+#setwd(directory)
+
+#url = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+#download.file(url, "dataset.zip")
+#unzip("dataset.zip")
+
+#setwd("UCI HAR Dataset")
+
+
+#files <- list.files(recursive = TRUE)
 
 ## Part2 : reading and merging the two datasets train and test
 
@@ -17,11 +34,11 @@ library(dplyr)
 library(reshape2)
 library(matrixStats)
 
-training <- read.table(files[[27]])
+training <- read.table("train/X_train.txt")
 head(training)
 str(training)
 
-testing <- read.table(files[[15]])
+testing <- read.table("test/X_test.txt")
 head(testing)
 str(testing)
 
@@ -56,8 +73,8 @@ merge.tables <- function(table1, table2, column.name) {
 activity.labels <- read.table(files[[1]])
 colnames(activity.labels) <- c("class", "activity")
 
-all.labels.activity <- merge(merge.tables(files[[16]], files[[28]], "class"), activity.labels, by = "class")
-merging.labelled <- cbind(all.labels.activity, merge.tables(files[[26]], files[[14]], "subject"), merging.mean.sd)
+all.labels.activity <- merge(merge.tables("train/y_train.txt", "test/y_test.txt", "class"), activity.labels, by = "class")
+merging.labelled <- cbind(all.labels.activity, merge.tables("train/subject_train.txt" , "test/subject_test.txt", "subject"), merging.mean.sd)
 
 #write.csv(merging.labelled, "merged_datasets_labelled.csv")
 
